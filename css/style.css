@@ -1,0 +1,172 @@
+/*--Skip to Content Button--*/
+a.skip{
+	padding: 10px;
+	text-decoration: none;
+	position: absolute;
+  top: -40px;
+  transition: top ease-in 2s;
+}
+
+a.skip:focus{
+	background: white;
+	top: 5px;
+	border: 1px solid black;
+}
+
+/*--Font--*/
+html, body {
+	font-family: Lato;
+}
+
+
+
+/*--Header--*/
+h1 {
+  padding: 13px 0px;
+  padding-left: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+/*--Sidenav--*/
+.sidenav {
+	position: fixed;
+	margin-top: 100px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #474747;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav a.active {
+  background: #474747;
+  color: white;
+  left: 10px;
+  width: 140px;
+}
+
+/*--Grid--*/
+header { grid-area: header; }
+nav { grid-area: nav; }
+main { grid-area; main; }
+footer { grid-area: footer; }
+
+body {
+  display: grid;
+	min-height: 100%;
+
+  grid-template-areas:
+    'header header header header'
+    'nav main main main'
+    'footer footer footer footer';
+	grid-template-rows: auto;
+	grid-template-columns: 200px 1fr;
+
+	padding: 5px;
+}
+
+/*--Content--*/
+main {
+	grid-column-start: 2;
+}
+
+.row {
+	display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+	padding: 0 5px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+img {
+  width: 100%
+}
+
+/*--Footer--*/
+footer {
+  text-align: center;
+}
+
+/*--Responsive Layouts--*/
+
+/*--Tablet--*/
+/*Responsive toggle not opened*/
+@media screen and (max-width: 768px) {
+		body {
+		  display: grid;
+			min-height: 100%;
+
+		  grid-template-areas:
+		    'header header header header'
+				'nav nav nav nav'
+		    'main main main main'
+		    'footer footer footer footer';
+			grid-template-rows: auto;
+			grid-template-columns: 1fr;
+
+			padding: 5px;
+		}
+
+		.sidenav {
+	    width: 100%;
+	    height: auto;
+	    position: relative;
+	  }
+	  .sidenav a {float: left;}
+	  div.content {margin-left: 0;}
+
+		.column {
+    	flex: 50%;
+    	max-width: 50%;
+  	}
+}
+
+
+/*--Mobile--*/
+/* Responsive toggle not opened */
+@media screen and (max-width: 414px) {
+	body {
+	  display: grid;
+		min-height: 100%;
+
+	  grid-template-areas:
+	    'header header header header'
+			'nav nav nav nav'
+	    'main main main main'
+	    'footer footer footer footer';
+		grid-template-rows: auto;
+
+		padding: 5px;
+	}
+
+	.sidenav a {
+		padding: 6px;
+    text-align: center;
+    float: none;
+  }
+
+	.column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}

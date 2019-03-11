@@ -1,0 +1,74 @@
+/*--Header--*/
+h1 {
+  float: left;
+  padding: 13px 0px;
+  padding-left: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  color: black;
+  overflow: hidden;
+  display: block;
+}
+
+header {
+  position:absolute;
+  left:0; right:0;
+  height: 92px;
+}
+
+/*--Sidenav--*/
+.sidenav {
+  position: absolute;
+  left:0; top:92px; bottom: 0;
+  width: 15%;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav a.active {
+  background: grey;
+  color: white;
+  border-bottom: 3px solid black;
+  left: 10px;
+  width: 130px;
+}
+
+/*--Body--*/
+#container {
+  min-height: 100%
+}
+
+/*--Content--*/
+main {
+  position: absolute;
+  left:178px; top:92px; right:0; bottom:0;
+
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/*--Footer--*/
+footer {
+  background: white;
+  position: fixed;
+  bottom: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
